@@ -27,7 +27,7 @@ Article for shared libraries -> https://gist.github.com/gubatron/32f82053596c24b
 static libraries are formed by combining many onject (.o) files together and having .a extension
 'ar -cvq stat_lib.a test1.o test2.o test3.o' -> this will create stat_lib.a static library
 
-Linking static and dll libs to create an executable (example)
+------------- Linking static and dll libs to create an executable (example) ------------------
 'g++ -o hellobeatles hellobeatles.o -L../johnpaul -L../georgeringo -ljohnpaul -lgeorgeringo'
       [or]
 'g++ -o hellobeatles hellobeatles.o ../johnpaul/libjohnpaul.a ../georgeringo/libgeorgeringo.so'
@@ -40,6 +40,7 @@ Flags or options for g++/gcc
 'gcc file1.c file2.c -o exefile' -> compiles file1 and file2 and forms the executable exefile
 -c -> compiles and assembles files but doesn’t link them. This is useful when building large projects to separate file compilation 
       and minimize what is re-compiled.
+-fno-inline -> disable expansion of inline functions
 
 -------------------------- compiling with libraries (-l & -L) ---------------------------------------------
 -l links with a library file
